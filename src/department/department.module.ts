@@ -9,7 +9,7 @@ import { Department, DepartmentSchema } from "./schemas/department.schema";
     MongooseModule.forFeature([{
       name: Department.name,
       schema: DepartmentSchema,
-    }])
+    }]),
   ],
   controllers: [DepartmentController],
   providers: [DepartmentService]

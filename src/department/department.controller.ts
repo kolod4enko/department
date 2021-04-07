@@ -14,7 +14,7 @@ export class DepartmentController {
     return this.deptService.getAll()
   }
 
-  @Get('id')
+  @Get(':id')
   getOne(@Param('id') id: string) {
     return this.deptService.getOne(id);
   }
@@ -25,12 +25,12 @@ export class DepartmentController {
     return this.deptService.create(payload);
   }
 
-  @Put()
+  @Put(':id')
   update(@Body() payload: UpdateDeptDto, @Param('id') id: string) {
     return this.deptService.update(id, payload);
   }
 
-  @Delete('id')
+  @Delete(':id')
   remove(@Param('id') id: string) {
     return this.deptService.delete(id);
   }

@@ -1,3 +1,3 @@
-export class UpdateDeptDto {
-  readonly name: string;
-}
+import { CreateDeptDto } from "./create-dept.dto";
+
+export class UpdateDeptDto extends CreateDeptDto {}

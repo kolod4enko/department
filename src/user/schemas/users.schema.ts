@@ -1,6 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import mongoose, { Document } from 'mongoose';
 import { Department } from "../../department/schemas/department.schema";
+import { Document, Types } from "mongoose";
+import * as mongoose from 'mongoose'
 
 @Schema()
 export class Users {
@@ -17,7 +18,7 @@ export class Users {
   phone: string;
 
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Department' })
-  department: Department;
+  department: Types.ObjectId;
 }
 
 export type UsersDocument = Users & Document;
